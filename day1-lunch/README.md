@@ -10,6 +10,3 @@
  
  2c. To find the median I would first segregate exons by gene. [if start_exon(n)>start_gene(n) and end_exon(n)<end_gene(n)]. This would allow me to get exons per gene. Then I would sort each gene by number of exons and find the middle number.
  
- 
- 
- aadfasfffff
