@@ -11,7 +11,8 @@
  2c. To find the median I would first segregate exons by gene. [if start_exon(n)>start_gene(n) and end_exon(n)<end_gene(n)]. This would allow me to get exons per gene. Then I would sort each gene by number of exons and find the middle number.
  
 3b cut -f4 chrom.bed|sort|uniq -c
-	= 305 1
+	= 
+305 1
   17 10
   17 11
   30 12
@@ -28,3 +29,30 @@
  654 9
  
  3c. make a list where I have every gene name and then gene end-start to get the bp length of each gene. Then sort by state and sum the length per state. Then I would sort to find the state with the max sum. 
+ 
+ 
+ 4b. grep AFR /Users/cmdb/qbb2022-answers/day1-lunch/samples.panel|cut -f2|uniq -c
+ =
+ 90 ACB
+   6 GWD
+  31 ACB
+  12 GWD
+   2 ACB
+ 126 GWD
+  33 ESN
+  21 GWD
+  35 MSL
+  70 ESN
+   4 MSL
+  12 GWD
+  55 ESN
+  65 MSL
+  15 ESN
+   3 GWD
+  24 MSL
+  77 YRI
+  23 LWK
+ 129 YRI
+  99 LWK
+ 112 ASW
+ 
