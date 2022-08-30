@@ -41,3 +41,23 @@
  128 MSL
  206 YRI
  
+ 4c - I would change which population I was grepping to each of the 5 populations
+ 
+ 
+ 5c.
+ 9514 0|0
+ 127 0|1
+ 178 1|0
+ 181 1|1
+ 
+ 5d.
+ 181
+ 
+ 5e
+ once
+ 
+ f. 
+ to extract the afr values I would get column 8 on its own, split by ";" and then get the indexes that correspond to the AFR sub-populations
+ 
+ 
+ 
