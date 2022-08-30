@@ -82,3 +82,36 @@ if __name__ == "__main__":
         print(bed[i])
 
 ```
+
+
+
+2.SECOND PROBLEM
+```
+#!/usr/bin/env python3
+#imports required packages/functions
+import sys
+import statistics
+from parserbb import parse_bed
+
+#gets the median number of exons
+def getmeans(fname):
+	#empty list that will contain # exons per gene
+	exons=[]
+	#add exons to list
+	for i in fname:
+		exons.append(int(i[9]))
+	#get the median # of exons
+	return(statistics.median(exons))
+
+
+
+if __name__ == "__main__":
+    #input file is specified through command line
+    fname = sys.argv[1]
+    #do the function on the input
+    bed = parse_bed(fname)
+    #call the median getting function
+    output=getmeans(bed)
+    #print median exons
+    print(output)
+```
