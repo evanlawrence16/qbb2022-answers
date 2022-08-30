@@ -54,14 +54,17 @@ def parse_bed(fname):
                 except:
                     print(f"Line {i} itemrgb contains data that are not integers", file=sys.stderr)
 
-#make sure block sizes and block counts are equal
+#make sure block sizes, block counts, and block starts are equal
         if fieldN>11:
+            count=int(fields[9])
             sizes=fields[10].split(",")
             sizes.remove("")
-            counts=fields[11].split(",")
-            counts.remove("")
-            if len(sizes)!=len(counts):
-                print(f"Line {i} blockSizes and blockCounts are unequal", file=sys.stderr)
+            starts=fields[11].split(",")
+            starts.remove("")
+            if len(sizes)==len(starts) and len(sizes)==count:
+                pass
+            else:
+                print(f"Line {i} blockSizes, blockCounts, and blockStarts are unequal", file=sys.stderr)
 
 
 
@@ -80,6 +83,7 @@ if __name__ == "__main__":
     #print first two lines of output
     for i in range(2):
         print(bed[i])
+
 
 ```
 
