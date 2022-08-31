@@ -13,7 +13,7 @@ plink --bfile /Users/cmdb/qbb2022-answers/day3-homework/plink/plink --pca 3
 ```
 
 
-QUESTION 3
+QUESTION 2
 
 my code
 ```
@@ -37,3 +37,40 @@ plt.show()
 ```
 
 The points seem to separate into 3 distinct clusters. Maybe this relates to the superfamily they originate from? 
+
+
+
+QUESTION 3
+
+here is the code I used to get the plots
+```
+#!/usr/bin/env python3
+import numpy as np
+from matplotlib import pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+
+sns.set(style='ticks')
+
+#gets data from my text files
+vectors=np.genfromtxt("/Users/cmdb/qbb2022-answers/day3-homework/join/joined.txt",
+	dtype = None, encoding = None)
+
+#makes the array into a csv
+df = pd.DataFrame(vectors, columns = ["sample", "pop", "super_pop", "gender", "subsample", "vec1", "vec2", "vec3"])
+#formatting and exporting the csv
+df = df.iloc[1: , :]
+df.to_csv("/Users/cmdb/qbb2022-answers/day3-homework/join/dataframe.csv",index=False)
+#loading the csv
+dff=pd.read_csv("/Users/cmdb/qbb2022-answers/day3-homework/join/dataframe.csv")
+
+#plotting the data
+ax=sns.scatterplot(x='vec1', y='vec2', data=dff, hue="super_pop")
+ax.set(xlabel='PC1', ylabel='PC2', title="SNP PCA by super pop")
+ax.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
+
+plt.show()
+```
+
+
