@@ -220,7 +220,6 @@ if __name__ == "__main__":
 	#zip the lists into a dictionary
 	snpidsetc=dict(zip(lis1,lis2))
 
-
 #replacing ids in the random snippit file
 #opens an output file
 	newfile=open("/Users/cmdb/qbb2022-answers/day2-homework/correct.vcf",'a+')
@@ -230,29 +229,24 @@ if __name__ == "__main__":
 	randomllines=f.readlines()
 	f.close()
 
+
 	#for each line in the random file 
 	unlabeled=0
 	for i in randomllines:
 		#we either split by tab, or dump it to the output file
 		try:
 			list0=i.split("\t")
-			#print(list0)
-		except:
-			line=i
-			continue
 		#for each line that was split by tab we try and find the position in our dictionary
 		#if we do find it we replace the blank id with the new id and write that to the output
 		#otherwise we just write the original line to the output and count the entry as unlabelled
-		for key in snpidsetc.keys():
-			if "\t"+str(key)+"\t" in i:
-				list0[2]=snpidsetc[key]
-				#print(list0)
+			if int(list0[1]) in snpidsetc:
+				list0[2]=snpidsetc[int(list0[1])]
 				line="\t".join(list0)
-				#print(line)
 			else:
 				line="\t".join(list0)
 				unlabeled=unlabeled+1
-		#print(line)
+		except:
+			line=i
 		newfile.write(line)
 
 
@@ -261,7 +255,8 @@ if __name__ == "__main__":
 	#print the number of entries without ids
 	print(unlabeled)
 
+
 ```
 
-OUTPUT=
+OUTPUT=100
  
