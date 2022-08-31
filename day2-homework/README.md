@@ -176,4 +176,92 @@ if __name__ == "__main__":
 		print(vcf[i])
 		
 ```
+
+
+
+
+
+
+SECOND PROBLEM
+
+```
+#!/usr/bin/env python3
+
+#import libraries/functions
+import sys
+from vcf_parser_4 import parse_vcf
+
+
+
+
+
+
+#the code starts running here
+if __name__ == "__main__":
+	#paths to each of the input files
+	dbsnp="/Users/cmdb/qbb2022-answers/day2-homework/dbSNP_snippet.vcf"
+	random="/Users/cmdb/qbb2022-answers/day2-homework/random_snippet.vcf"
+
+
+
+#getting a dictionary of snps
+	#parses the snp file
+	vcf=parse_vcf(dbsnp)
+
+	#lists to hold locations and ids
+	lis1=[]
+	lis2=[]
+
+	#append location and ids to lists
+	for i in range(len(vcf)):
+		lis1.append(vcf[i][1])
+		lis2.append(vcf[i][2])
+
+	#zip the lists into a dictionary
+	snpidsetc=dict(zip(lis1,lis2))
+
+
+#replacing ids in the random snippit file
+#opens an output file
+	newfile=open("/Users/cmdb/qbb2022-answers/day2-homework/correct.vcf",'a+')
+
+	#reads in the random file line by line
+	f=open(random,'r')
+	randomllines=f.readlines()
+	f.close()
+
+	#for each line in the random file 
+	unlabeled=0
+	for i in randomllines:
+		#we either split by tab, or dump it to the output file
+		try:
+			list0=i.split("\t")
+			#print(list0)
+		except:
+			line=i
+			continue
+		#for each line that was split by tab we try and find the position in our dictionary
+		#if we do find it we replace the blank id with the new id and write that to the output
+		#otherwise we just write the original line to the output and count the entry as unlabelled
+		for key in snpidsetc.keys():
+			if "\t"+str(key)+"\t" in i:
+				list0[2]=snpidsetc[key]
+				#print(list0)
+				line="\t".join(list0)
+				#print(line)
+			else:
+				line="\t".join(list0)
+				unlabeled=unlabeled+1
+		#print(line)
+		newfile.write(line)
+
+
+	#close the output file
+	newfile.close()
+	#print the number of entries without ids
+	print(unlabeled)
+
+```
+
+OUTPUT=
  
