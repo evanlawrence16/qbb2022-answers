@@ -6,6 +6,7 @@ A. each toss in the array a number of coinflips to do. Probs makes a range of va
 C. The more weighted the coin or the more times flipped, the larger the power. This is similar to effect size and sample size in biology.
 
 D. 
+
 a. This study is interested in testing for 'selfish alleles' in humans. Alleles that have a probability >.5 of being passed down to the next generation. 
 
 b. These plots look very similar, except you need fewer coin flips than number of sperm, probably because you are only able to get a limited amount of info per sperm while with coin flips we get either heads or tails.
