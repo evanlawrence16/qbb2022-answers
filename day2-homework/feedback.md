@@ -1,0 +1,3 @@
+# Feedback day2-homework
+
+This all looks good. Your comments for the VCF parser are clear and suggest you understand what each block of code is doing and why. Your annotation script works and gets the right answer. Just a couple of comments about the annotation script. The way that you are making the Snp dictionary works, but is more work than it needs to be. You could simply add each element to the dictionary in the for loop without creating the two lists. Also, I was surprised that you didn't use the parser for opening the random Snp file. However, I suspect it was so that you could write the output without any fuss about formatting it. And it works very well. Overall, great job. Keep it up!
