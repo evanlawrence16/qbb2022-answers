@@ -21,6 +21,33 @@ See Figure_1 and genomemodel.py for the code
   
   
   
-  QUESTION 2.
+QUESTION 2.
+
+this is what I ran for spades 
+spades.py --pe1-1 frag180.1.fq --pe1-2 frag180.2.fq --mp1-1 jump2k.1.fq --mp1-2 jump2k.2.fq -o asm -t 4 -k 31 -m 1024
+
+2.1 
+grep -c '>' contigs.fasta   = 4
+
+2.2 
+ran this line ``` awk '/^>/ {print;next;} {print length($0);}' contigs.fasta | uniq ```
+then add together length in the headers
+=234467
+
+2.3
+From the headers I got in the last answer the longest is 105830 bps
+
+2.4
+I only got 4 contigs. so the N50 was 47860
+  
+  
+  
+QUESTION 3.
+  
+  
+  
+QUESTION 4.
+
+
 
  
