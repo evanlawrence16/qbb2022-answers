@@ -60,7 +60,7 @@ insertions=1 deletions=15
 QUESTION 4.
 
 4.1
-looking in the out.delta file the position = 27498-26787
+looking in the out.delta file the position = 26787-27498
 
 4.2
 Looking in out.report the insertion length = 712
