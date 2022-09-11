@@ -43,11 +43,52 @@ I only got 4 contigs. so the N50 was 47860
   
   
 QUESTION 3.
-  
+
+3.1 
+I ran dnadiff /Users/cmdb/qbb2022-answers/week1-homework/asm/ref.fa /Users/cmdb/qbb2022-answers/week1-homework/asm/asm/scaffolds.fasta
+Identity = 99.98
+
+3.2
+I ran  nucmer --coords /Users/cmdb/qbb2022-answers/week1-homework/asm/ref.fa /Users/cmdb/qbb2022-answers/week1-homework/asm/asm/scaffolds.fasta
+Longest = 207007
+ 
+3.3
+Looking in the out.report file I get
+insertions=1 deletions=15
   
   
 QUESTION 4.
 
+4.1
+looking in the out.delta file the position = 27498-26787
 
+4.2
+Looking in out.report the insertion length = 712
 
- 
+4.3
+I ran samtools faidx /Users/cmdb/qbb2022-answers/week1-homework/asm/asm/scaffolds.fasta NODE_1_length_234497_cov_20.506939:26787-27498
+
+and I got
+
+>NODE_1_length_234497_cov_20.506939:26787-27498
+CATACAATGCGTATTGTAGTATGGCCTTACGGGAGGGCAGACGGCAAAGAGTGATCACGT
+TCTATCGGATGCAAGGCACCGCTTTATCCATTAGCCTCTTATTGGAGGAGGGCATGGCAT
+TCATACCCAATGGCTCAATTCTTTTACTACAACATTGATAACTTATCCAAGTACTCTACG
+ACCAACCTGCAGAACGGCCCACCGGCCTAACGGCATACCTCACAACTACCCTGCTAAGGC
+GAGCACTCCAGCCAAGCAAGACCACATCCACCCAAGCCCACCTCATCGCCTCAGCCAATA
+GCGCTCAGACAAAAGGAACTTATTATTAACTGAAACGCTGTACTGCGGTAAGTCCTCAAC
+GCCGACCAAACGAAACCAGCAGCGTAGTCCTATCGGACTCGCTTGCACACATAACACATG
+CTTGTAGTCTTGCACGACCCCAGGCGGACATGAGTTTCTGCTGGGCGGCGAGGAGTCGAA
+GCTGCGGGCATTCCTTTCCGAAAACATGAATTACTGCGGGTATGTCCGACCTCAAACATT
+CGTACCTGAGCATATTGCTCAAGTGAGCCAGTCGGCAATTCATATCCGAAAACATGACTG
+TCTTGCATAAGGCCTCTCTTACGAGCTGAGTGCACGAACCACGGAACAGCTTAGTCACTT
+AGAAGAGTACTCTATTCGGGACTTGAAGTACGCGTGCAATCGGGAACTAGTG
+
+4.4
+I ran  
+
+python3 /Users/cmdb/qbb2022-answers/week1-homework/asm/dna-decode.py --decode --input /Users/cmdb/qbb2022-answers/week1-homework/message.fasta
+
+and I got 
+!··3¹0º:¶0º4··9:7:42!¦¢! %$*1¶0¹¹%²²¸7·67·µ´·337¹64º:623¹2²·0¶4²·9
+ as the message
