@@ -24,10 +24,10 @@ See Figure_1 and genomemodel.py for the code
 QUESTION 2.
 
 this is what I ran for spades 
-spades.py --pe1-1 frag180.1.fq --pe1-2 frag180.2.fq --mp1-1 jump2k.1.fq --mp1-2 jump2k.2.fq -o asm -t 4 -k 31 -m 1024
+```spades.py --pe1-1 frag180.1.fq --pe1-2 frag180.2.fq --mp1-1 jump2k.1.fq --mp1-2 jump2k.2.fq -o asm -t 4 -k 31 -m 1024```
 
 2.1 
-grep -c '>' contigs.fasta   = 4
+```grep -c '>' contigs.fasta```   = 4
 
 2.2 
 ran this line ``` awk '/^>/ {print;next;} {print length($0);}' contigs.fasta | uniq ```
@@ -45,11 +45,11 @@ I only got 4 contigs. so the N50 was 47860
 QUESTION 3.
 
 3.1 
-I ran dnadiff /Users/cmdb/qbb2022-answers/week1-homework/asm/ref.fa /Users/cmdb/qbb2022-answers/week1-homework/asm/asm/scaffolds.fasta
+I ran ```dnadiff /Users/cmdb/qbb2022-answers/week1-homework/asm/ref.fa /Users/cmdb/qbb2022-answers/week1-homework/asm/asm/scaffolds.fasta```
 Identity = 99.98
 
 3.2
-I ran  nucmer --coords /Users/cmdb/qbb2022-answers/week1-homework/asm/ref.fa /Users/cmdb/qbb2022-answers/week1-homework/asm/asm/scaffolds.fasta
+I ran  ```nucmer --coords /Users/cmdb/qbb2022-answers/week1-homework/asm/ref.fa /Users/cmdb/qbb2022-answers/week1-homework/asm/asm/scaffolds.fasta```
 Longest = 207007
  
 3.3
@@ -66,7 +66,7 @@ looking in the out.delta file the position = 27498-26787
 Looking in out.report the insertion length = 712
 
 4.3
-I ran samtools faidx /Users/cmdb/qbb2022-answers/week1-homework/asm/asm/scaffolds.fasta NODE_1_length_234497_cov_20.506939:26787-27498
+I ran ```samtools faidx /Users/cmdb/qbb2022-answers/week1-homework/asm/asm/scaffolds.fasta NODE_1_length_234497_cov_20.506939:26787-27498```
 
 and I got
 
@@ -87,7 +87,7 @@ AGAAGAGTACTCTATTCGGGACTTGAAGTACGCGTGCAATCGGGAACTAGTG
 4.4
 I ran  
 
-python3 /Users/cmdb/qbb2022-answers/week1-homework/asm/dna-decode.py --decode --input /Users/cmdb/qbb2022-answers/week1-homework/message.fasta
+```python3 /Users/cmdb/qbb2022-answers/week1-homework/asm/dna-decode.py --decode --input /Users/cmdb/qbb2022-answers/week1-homework/message.fasta```
 
 and I got 
 !··3¹0º:¶0º4··9:7:42!¦¢! %$*1¶0¹¹%²²¸7·67·µ´·337¹64º:623¹2²·0¶4²·9
