@@ -65,3 +65,13 @@ Motif Finding
 meme-chip -maxw 7 CoordinatesPeaks.fa
 ```
 
+scan motifs against database
+```
+tomtom /Users/cmdb/qbb2022-answers/week5-homework/memechip_out/combined.meme /Users/cmdb/Downloads/motif_databases/MOUSE/HOCOMOCOv11_full_MOUSE_mono_meme_format.meme
+```
+
+to pull out matches run 
+```
+grep -e "KLF4"  /Users/cmdb/qbb2022-answers/week5-homework/tomtom_out/tomtom.tsv >KLF4.tsv
+grep -e SOX2  /Users/cmdb/qbb2022-answers/week5-homework/tomtom_out/tomtom.tsv  > Sox2.tsv
+```
