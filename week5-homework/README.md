@@ -73,5 +73,5 @@ tomtom /Users/cmdb/qbb2022-answers/week5-homework/memechip_out/combined.meme /Us
 to pull out matches run 
 ```
 grep -e "KLF4"  /Users/cmdb/qbb2022-answers/week5-homework/tomtom_out/tomtom.tsv >KLF4.tsv
-grep -e SOX2  /Users/cmdb/qbb2022-answers/week5-homework/tomtom_out/tomtom.tsv  > Sox2.tsv
+grep -e "SOX2"  /Users/cmdb/qbb2022-answers/week5-homework/tomtom_out/tomtom.tsv  > Sox2.tsv
 ```
