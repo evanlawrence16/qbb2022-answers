@@ -23,5 +23,19 @@ python3 /Users/cmdb/qbb2022-answers/week6-homework/modifiedLoad_Data.py /Users/c
 
 output= figure2
 
+Q1. 
+I was not able to see the highlighted difference from the original figure.
+
+Q2.
+Sequencing depth dramatically smoothed the color distribution in the figure.
+
+Q3.
+The highlighted area shows differences in TAD interactions between single and double deletions.
+
 Insulation Scores
+Run 
+```
+python3 /Users/cmdb/qbb2022-answers/week6-homework/modifiedLoad_Data2.py  /Users/cmdb/qbb2022-answers/week6-homework/3dgenome_data/matrix/dCTCF_full.40000.matrix /Users/cmdb/qbb2022-answers/week6-homework/3dgenome_data/matrix/40000_bins.bed
+```
+output=figure3
 
