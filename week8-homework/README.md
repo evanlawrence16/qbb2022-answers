@@ -71,3 +71,5 @@ whatshap split --output-h1 Chr20haplo1 --output-h2 Chr20haplo2 /Users/cmdb/qbb20
  samtools index Chr20haplo2.bam  Chr20haplo2.bam.bai
  ```
  
+ 
+ PART 6 - I assigned the haplotypes myself, not based on anything, so I do not expect that haplotype 1 on chr11 comes from the same parent as haplotype 1 on chr20.
