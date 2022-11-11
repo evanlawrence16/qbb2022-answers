@@ -62,25 +62,25 @@ output = filteredvals[:,leves2]
 output=output[leves1,:]
 
 #plot dendrogram 2
-#fig = plt.figure(figsize=(10, 10))
-#dn = dendrogram(Z)
-#plt.title("Dendrogram of gene expression")
-#plt.show()
+fig = plt.figure(figsize=(10, 10))
+dn = dendrogram(Z)
+plt.title("Dendrogram of gene expression")
+plt.show()
 
 
 #plot dendrogram
-#fig = plt.figure(figsize=(10, 10))
-#dn = dendrogram(Z1)
-#plt.title("Dendrogram of cell types")
-#plt.show()
+fig = plt.figure(figsize=(10, 10))
+dn = dendrogram(Z1)
+plt.title("Dendrogram of cell types")
+plt.show()
 
 
 #plot heatmap
-#plt.imshow(output.T, cmap='hot', interpolation='nearest', aspect='auto')
-#plt.title("Clustered heatmap of gene expression")
-#plt.xlabel("Gene")
-#plt.ylabel("Cell Type")
-#plt.show()
+plt.imshow(output.T, cmap='hot', interpolation='nearest', aspect='auto')
+plt.title("Clustered heatmap of gene expression")
+plt.xlabel("Gene")
+plt.ylabel("Cell Type")
+plt.show()
 
 
 
